@@ -18,6 +18,8 @@ public class Objective {
     private String notes;
     // private Date dateToday;
 
+    // Early explorations, refactor guaranteed.
+
     public Objective(Object object){
         this.title = object.title;
         this.description = object.description;
