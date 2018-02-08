@@ -80,4 +80,31 @@ public class ObjectiveTest {
     // I can feel a refactor in this toggling code to put all under the
     // same function coming on.
 
+    @Test
+    public void canGenerateRatings(){
+        objective.setRating();
+        assertEquals(4, objective.getRating());
+
+        // Toggling urgent to true should raise rating to 3.
+        objective.toggleUrgent();
+        objective.setRating();
+        assertEquals(3, objective.getRating());
+
+        //Toggling urgent to false and important to true should
+        // raise the rating to 2
+        objective.toggleUrgent();
+        objective.toggleImportant();
+        objective.setRating();
+        assertEquals(2, objective.getRating());
+
+        //Toggling urgent and important to true gives a rating of 1
+        objective.toggleUrgent();
+        objective.setRating();
+        assertEquals(1, objective.getRating());
+
+
+
+    }
+
+
 }

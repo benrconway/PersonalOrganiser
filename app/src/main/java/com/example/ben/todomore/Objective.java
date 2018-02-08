@@ -77,7 +77,7 @@ public class Objective {
             this.rating = 3;
         }
         // Quadrant of Waste
-        else {
+        if(!isUrgent() && !isImportant()) {
             this.rating = 4;
         }
 
