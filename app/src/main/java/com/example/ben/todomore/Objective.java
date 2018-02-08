@@ -22,6 +22,8 @@ public class Objective {
 
     public Objective(){
         this.completed = false;
+        this.important = false;
+        this.urgent = false;
 
     }
 
@@ -85,16 +87,24 @@ public class Objective {
         return important;
     }
 
-    public void setImportant(boolean important) {
-        this.important = important;
+    public void toggleImportant() {
+        if(isImportant()){
+            this.important = false;
+        } else {
+            this.important = true;
+        }
     }
 
     public boolean isUrgent() {
         return urgent;
     }
 
-    public void setUrgent(boolean urgent) {
-        this.urgent = urgent;
+    public void toggleUrgent() {
+        if(isUrgent()){
+            this.urgent = false;
+        } else {
+            this.urgent = true;
+        }
     }
 
     public String getNotes() {
