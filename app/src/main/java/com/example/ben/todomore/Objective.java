@@ -20,16 +20,88 @@ public class Objective {
 
     // Early explorations, refactor guaranteed.
 
-    public Objective(Object object){
-        this.title = object.title;
-        this.description = object.description;
+    public Objective(){
         this.completed = false;
-        this.rating = calculateRating(this.getImportance, this.getUrgency);
-        this.important = object.important;
-        this.urgent = object.urgent;
-        this.notes = object.notes;
 
     }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void toggleCompleted() {
+        if(isCompleted()){
+            this.completed = false;
+        } else {
+            this.completed = true;
+        }
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating() {
+
+        //  Quadrant of necessity (manage)
+        if(isImportant() && isUrgent()){
+            this.rating = 1;
+            return;
+        }
+
+        // Quadrant of quality and personal leadership (focus)
+        if(isImportant()){
+            this.rating = 2;
+        }
+
+        // Quadrant of deception (avoid)
+        if(isUrgent()) {
+            this.rating = 3;
+        }
+        // Quadrant of Waste
+        else {
+            this.rating = 4;
+        }
+
+    }
+
+    public boolean isImportant() {
+        return important;
+    }
+
+    public void setImportant(boolean important) {
+        this.important = important;
+    }
+
+    public boolean isUrgent() {
+        return urgent;
+    }
+
+    public void setUrgent(boolean urgent) {
+        this.urgent = urgent;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
 }
