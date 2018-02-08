@@ -69,6 +69,15 @@ public class ObjectiveTest {
         assertEquals(true, objective.isUrgent());
     }
 
-
+    @Test
+    public void canToggleCompletedBackToFalse(){
+        objective.toggleCompleted();
+        objective.toggleCompleted();
+        assertEquals(false, objective.isCompleted());
+    }
+    // Given the above test runs fine, I will assume at this point that
+    // both importance and urgency also work.
+    // I can feel a refactor in this toggling code to put all under the
+    // same function coming on.
 
 }
