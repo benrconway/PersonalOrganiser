@@ -75,10 +75,7 @@ public class ObjectiveTest {
         objective.toggleCompleted();
         assertEquals(false, objective.isCompleted());
     }
-    // Given the above test runs fine, I will assume at this point that
-    // both importance and urgency also work.
-    // I can feel a refactor in this toggling code to put all under the
-    // same function coming on.
+    // The tests above and below prove all toggling functions work as desired
 
     @Test
     public void canGenerateRatings(){
@@ -101,10 +98,7 @@ public class ObjectiveTest {
         objective.toggleUrgent();
         objective.setRating();
         assertEquals(1, objective.getRating());
-
-
-
     }
 
-
+    // Will add tests for date once I have researched date entry and formatting.
 }
