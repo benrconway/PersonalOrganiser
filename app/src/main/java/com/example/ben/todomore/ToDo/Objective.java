@@ -86,7 +86,6 @@ public class Objective implements Completeable{
     public void setNotes(String notes) {
         this.notes = notes;
     }
-}
 
     public int getRating() {
         return rating;
@@ -115,4 +114,5 @@ public class Objective implements Completeable{
         }
 
     }
+}
 
