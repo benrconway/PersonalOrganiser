@@ -1,4 +1,4 @@
-package com.example.ben.todomore;
+package com.example.ben.todomore.ToDo;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by ben on 07/02/18.
  */
 
-public class Objective {
+public class Objective implements Completeable{
 
     private String title;
     private String description;

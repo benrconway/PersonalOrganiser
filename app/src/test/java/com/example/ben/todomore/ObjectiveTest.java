@@ -1,5 +1,7 @@
 package com.example.ben.todomore;
 
+import com.example.ben.todomore.ToDo.Objective;
+
 import org.junit.Before;
 import org.junit.Test;
 
