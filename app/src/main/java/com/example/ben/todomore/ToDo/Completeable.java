@@ -6,6 +6,6 @@ package com.example.ben.todomore.ToDo;
 
 public interface Completeable {
     String getTitle();
-    boolean getCompleted();
+    boolean isCompleted();
 
 }
