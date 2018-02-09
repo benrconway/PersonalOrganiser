@@ -55,34 +55,6 @@ public class Objective implements Completeable{
         }
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating() {
-
-        //  Quadrant of necessity (manage)
-        if(isImportant() && isUrgent()){
-            this.rating = 1;
-            return;
-        }
-
-        // Quadrant of quality and personal leadership (focus)
-        if(isImportant()){
-            this.rating = 2;
-        }
-
-        // Quadrant of deception (avoid)
-        if(isUrgent()) {
-            this.rating = 3;
-        }
-        // Quadrant of Waste
-        if(!isUrgent() && !isImportant()) {
-            this.rating = 4;
-        }
-
-    }
-
     public boolean isImportant() {
         return important;
     }
@@ -115,3 +87,32 @@ public class Objective implements Completeable{
         this.notes = notes;
     }
 }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating() {
+
+        //  Quadrant of necessity (manage)
+        if(isImportant() && isUrgent()){
+            this.rating = 1;
+            return;
+        }
+
+        // Quadrant of quality and personal leadership (focus)
+        if(isImportant()){
+            this.rating = 2;
+        }
+
+        // Quadrant of deception (avoid)
+        if(isUrgent()) {
+            this.rating = 3;
+        }
+        // Quadrant of Waste
+        if(!isUrgent() && !isImportant()) {
+            this.rating = 4;
+        }
+
+    }
+
