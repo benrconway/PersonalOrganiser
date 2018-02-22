@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onToDoListButtonClicked(View button){
-        Intent intent = new Intent(this, ToDoList.class);
+        Intent intent = new Intent(this, ToDoListActivity.class);
         startActivity(intent);
     }
 
