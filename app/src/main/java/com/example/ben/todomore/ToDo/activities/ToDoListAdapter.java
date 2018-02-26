@@ -31,8 +31,6 @@ public class ToDoListAdapter extends ArrayAdapter<ToDoItem> {
 
         ToDoItem currentItem = getItem(position);
 
-
-
         TextView title = (TextView) listItemView.findViewById(R.id.to_do_title);
         title.setText(currentItem.getPrimary().getTitle());
 

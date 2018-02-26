@@ -12,11 +12,11 @@ public class Objective implements Completeable{
     private String description;
     private boolean completed;
     private int rating;
-    //private Date completionDate;
+    private Date completionDate;
     private boolean important;
     private boolean urgent;
     private String notes;
-    // private Date dateToday;
+
 
     // Early explorations, refactor guaranteed.
 
@@ -113,6 +113,14 @@ public class Objective implements Completeable{
             this.rating = 4;
         }
 
+    }
+
+    public void setCompletionDate(Date completionDate){
+        this.completionDate = completionDate;
+    }
+
+    public Date getCompletionDate(){
+        return this.completionDate;
     }
 }
 
